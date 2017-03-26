@@ -1,6 +1,6 @@
 {
-  "name": "application-name",
-  "version": "0.0.0",
+  "name": "Open Source Live Chat For CRM",
+  "version": "1.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
