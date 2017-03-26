@@ -56,17 +56,18 @@ Comming soon
         directives.js       --> custom angular directives
         filters.js          --> custom angular filters
         services.js         --> custom angular services
+      index.html            --> main page for app
+      chat.html             --> template page for chat widget
+      chat-builder.js       --> javscript template for chat widget
+      partials/             --> angular view partials 
+        partial1.html
+        partial2.html
       bower_components/
         angular/            --> angular.js
         angular-socket-io/  --> socket.io adapter for angular
     routes/
       index.js              --> route for serving HTML pages and partials
-    views/
-      index.jade            --> main page for app
-      layout.jade           --> doctype, title, head boilerplate
-      partials/             --> angular view partials (partial jade templates)
-        partial1.jade
-        partial2.jade
+    
 
 
 
