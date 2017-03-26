@@ -11,7 +11,7 @@ on the server.
 
 ## How to use it
 
-Clone the angular-socket-io-seed repository and start hacking!
+Clone the Open-Source-Live-Chat-For-CRM repository and start hacking!
 
 ### Running the app
 
@@ -39,9 +39,7 @@ bower update angular
 
 ## Example Application
 
-I created a [simple instant messaging application](https://github.com/btford/angular-socket-io-im)
-and wrote a [blog post](http://briantford.com/blog/angular-socket-io.html) walking through the app to
-illustrate using the seed.
+Comming soon
 
 ## Directory Layout
     
