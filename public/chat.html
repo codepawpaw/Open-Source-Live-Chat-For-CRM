@@ -1,0 +1,191 @@
+<style type="text/css">
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue';
+  font-size: 10px;
+  color: white;
+}
+
+.chat-box {
+  background: linear-gradient(0deg, #1E2C3D 00%, #3E364E 100%);
+  max-width: 500px;
+  font-family: 'Helvetica Neue';
+  font-size: 10px;
+  color: white;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.chat-container {
+  position: absolute;
+  padding: 2px;
+  width: 100%;
+  height: 500px;
+  overflow: scroll;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+
+
+p {
+  margin: 0;
+}
+
+.bubble {
+  float: left;
+  width: 50%;
+  margin-left: 20px;
+  max-width: 90%;
+  position: relative;
+  clear: both;
+  background: #95c2fd;
+  padding: 0.8em 1em;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 5px 30px rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  color: black;
+  word-wrap: break-word;
+  font-size: 1.2em;
+  margin-top: 30px;
+  opacity: 10;
+}
+
+.bubble:after {
+  border-radius: 20px / 5px;
+  content: '';
+  display: block;
+  position: absolute;
+  border: 8px solid transparent;
+  border-bottom-color: white;
+  bottom: 1px;
+  transform: rotateZ(-90deg);
+  left: -13px;
+}
+
+.bubble-alt {
+  float: right;
+  width: 50%;
+  max-width: 90%;
+  margin-right: 20px;
+}
+
+.bubble-alt:after {
+  left: auto;
+  border-bottom-color: white;
+  transform: rotateZ(90deg);
+  right: -13px;
+}
+
+.datestamp {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #8b91a0;
+  float: left;
+  opacity: 10;
+}
+
+.dt-alt {
+  float: right;
+}
+
+.chat-control {
+  padding: 1.2em;
+  margin-top: 495px;
+}
+
+.chat-input {
+  width: 100%;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+  padding: 0.7em;
+}
+
+.chat-input:focus {
+  border: none;
+}
+
+.chat-header {
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 1.7em;
+  text-align: center;
+}
+
+.chat-header span {
+  font-size: 12px;
+  position: absolute;
+  margin: 47px -50px;
+  font-style: italic;
+}
+
+.user-profile {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #DFDFEF;
+  margin: 0 10px;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  cursor: pointer
+}
+
+.user-profile:nth-child(1) {
+  background-image: url(http://vignette3.wikia.nocookie.net/fairytail/images/0/02/Mugshot_of_Erza.png/revision/latest?cb=20130509171537);
+}
+
+.user-profile.active {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+ 
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<div class="chat-box">
+  <div class="chat-header">
+    <div class="user-profile active" data-up='cont1'></div>
+    <span>Erza</span>
+  </div>
+  <div id='chat' class="chat">
+
+    <div class="chat-container" id='cont1'>
+      
+    </div>
+
+
+  </div>
+  <div class="chat-control">
+    <input class="chat-input" type="text" placeholder="enter your message" />
+  </div>
+</div>
+
+<script>
+  var socket = io.connect('http://localhost:3000');
+  $('.chat-input').keypress(function(e) {
+  	if(e.which == 13) {
+      var messageHTML = '<div class="bubble"><B>Me</B><p>'+$('.chat-input').val()+'</p></div>';
+      $('.chat-container').append(messageHTML);
+  		console.log($('.chat-input').val());
+  		socket.emit('send:chat', { text: $('.chat-input').val() , from: 'visitor'});
+  		$('.chat-input').val("");
+  	}
+  });
+  socket.on('send:toVisitor', function (data) {
+  	console.log(data);
+    var messageHTML = '<div class="bubble bubble-alt"><B>Agent</B><p>'+data.text +'</p></div>';
+      $('.chat-container').append(messageHTML);
+  });
+
+
+</script>

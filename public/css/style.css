@@ -1,0 +1,253 @@
+
+
+.fabSpeedDialdemoMoreOptions .md-fab-top-right {
+  top: 16px; 
+}
+
+@media (max-device-width: 600px) {
+  .fabSpeedDialdemoMoreOptions .md-fab-top-right {
+    top: 9px;
+    right: 9px; 
+  } 
+}
+
+.fabSpeedDialdemoMoreOptions .md-fab.demo-fab.trigger-fab:hover, .fabSpeedDialdemoMoreOptions .md-fab.demo-fab.trigger-fab.md-focused, .fabSpeedDialdemoMoreOptions .md-fab.demo-fab.action-fab:hover, .fabSpeedDialdemoMoreOptions .md-fab.demo-fab.action-fab.md-focused {
+  background-color: blue; 
+}
+
+.fabSpeedDialdemoMoreOptions .md-fab.demo-fab.action-fab {
+  background-color: blue; 
+}
+
+.fabSpeedDialdemoMoreOptions md-content div[flex="50"] {
+  padding: 15px; 
+}
+
+.fabSpeedDialdemoMoreOptions md-fab-speed-dial {
+  margin-top: 89px; 
+}
+ 
+ .fabSpeedDialdemoMoreOptions md-fab-speed-dial md-fab-trigger {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1); 
+}
+
+.fabSpeedDialdemoMoreOptions md-fab-speed-dial.md-scale.ng-hide-add.ng-hide-add-active, .fabSpeedDialdemoMoreOptions md-fab-speed-dial.md-fling.ng-hide-add.ng-hide-add-active {
+    display: flex !important; 
+}
+
+.fabSpeedDialdemoMoreOptions md-fab-speed-dial.md-scale.ng-hide md-fab-trigger, .fabSpeedDialdemoMoreOptions md-fab-speed-dial.md-fling.ng-hide md-fab-trigger {
+    transform: scale(0); 
+}
+
+.fabSpeedDialdemoMoreOptions .intro {
+  padding-left: 5px; 
+}
+
+#nav-button-right {
+  color: white;
+  background-color: white;
+}
+
+
+/**------ CSS FOR DIALOG -------------------------**/
+.demo-md-panel {
+  min-height: 800px;
+}
+
+.demo-dialog-example {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
+      0 13px 19px 2px rgba(0, 0, 0, 0.14),
+      0 5px 24px 4px rgba(0, 0, 0, 0.12);
+  width: 900px;
+}
+
+.demo-dialog-content {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.demo-dialog-content img {
+  height: 500px;
+  margin: auto;
+}
+
+.demo-dialog-button {
+  width: 100%;
+}
+
+.demo-dialog-custom-animation-open {
+  opacity: 1;
+  transition: all 1s linear, opacity 1ms;
+  transform: rotate(390deg);
+}
+
+.demo-dialog-custom-animation-close {
+  opacity: 0;
+  transition: all 1s linear, opacity 1ms;
+  transform: rotate(0deg);
+}
+
+
+
+/************** TAMBAHAN ******************/
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+
+.dialogdemoBasicUsage .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 20px; }
+
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+  font-size: 0.8em;
+  margin-top: 50px; }
+
+.dialogdemoBasicUsage button {
+  width: 200px; }
+
+.dialogdemoBasicUsage div#status {
+  color: #c60008; }
+
+.dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
+  margin-bottom: 0; }
+
+
+
+/*************** GRID ***************/
+ md-grid-list {
+  margin: 8px; }
+
+.gray {
+  background: #f5f5f5; }
+.green {
+  background: #b9f6ca; }
+
+.yellow {
+  background: #ffff8d; }
+
+.blue {
+  background: #84ffff; }
+
+.purple {
+  background: #b388ff; }
+
+.red {
+  background: #ff8a80; }
+
+md-grid-tile {
+  transition: all 400ms ease-out 50ms; }
+
+
+
+.fabSpeedDialdemoBasicUsage .text-capitalize {
+  text-transform: capitalize; }
+
+.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+  background-color: #000 !important; }
+
+.fabSpeedDialdemoBasicUsage p.note {
+  font-size: 1.2rem; }
+
+.fabSpeedDialdemoBasicUsage .lock-size {
+  min-width: 300px;
+  min-height: 300px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+
+
+
+
+.progressCirculardemoBasicUsage body {
+  padding: 20px; }
+
+.progressCirculardemoBasicUsage h4 {
+  margin: 10px 0; }
+
+.progressCirculardemoBasicUsage md-progress-circular {
+  margin-bottom: 20px; }
+
+.progressCirculardemoBasicUsage #loaders > md-switch {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -10px; }
+
+.progressCirculardemoBasicUsage #loaders > h5 {
+  margin-top: 0; }
+
+.progressCirculardemoBasicUsage #loaders > p {
+  margin-right: 20px;
+  margin-bottom: 24px; }
+
+.progressCirculardemoBasicUsage p.small {
+  font-size: 0.8em;
+  margin-top: -18px; }
+
+.progressCirculardemoBasicUsage hr {
+  width: 100%;
+  margin-top: 20px;
+  border-color: rgba(221, 221, 177, 0.1); }
+
+.progressCirculardemoBasicUsage p.small > code {
+  font-size: 0.8em; }
+
+.progressCirculardemoBasicUsage .visible {
+  border-color: rgba(221, 221, 177, 0); }
+
+
+
+.selectdemoBasicUsage md-input-container {
+  margin-right: 10px; }
+
+
+
+.footer {
+    height:100px;
+    width:100%;
+   background-color: #222;
+  border-color: #080808;
+}
+
+.top-card {
+  margin-top : -300px;
+}
+
+
+element.style {
+}
+@media only screen and (min-width: 800px)
+.hero-image-container {
+    height: 30vw;
+}
+.hero-image-container {
+    overflow: hidden;
+}
+.hero-image-container {
+    -webkit-transition: height .5s ease-in;
+    -moz-transition: height .5s ease-in;
+    transition: height .5s ease-in;
+    height: 36vw;
+    max-height: 500px;
+    position: relative;
+    background-color: #fff;
+    margin-top: -100px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+    display: block;
+}
+user agent stylesheet
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+Inherited from div#content.clrfix
+.clrfix, .ie8 .g-group, .ie8 .g-grid, .ie8 .overlay-dialog__frame, .ie8 .g-vertical-group, .ie8 .dialog-frame-content, .ie8 .timeline__item, .ie8 .breakdown__item, .list-card, .list-card-v2 {
+    zoom: 1;
+}
+.clrfix, .ie8 .g-group, .ie8 .g-grid, .ie8 .overlay-dialog__frame, .ie8 .g-vertical-group, .ie8 .dialog-frame-content, .ie8 .timeline__item, .ie8 .breakdown__item, .list-card, .list-card-v2 {
+    zoom: 1;
+}
