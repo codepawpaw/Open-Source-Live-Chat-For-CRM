@@ -1,0 +1,106 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/bornevia/open-source-chat',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/bornevia/.npm/open-source-chat/1.0.0/package.tgz not in flight; packing
+9 info lifecycle open-source-chat@1.0.0~prepublish: open-source-chat@1.0.0
+10 silly lifecycle open-source-chat@1.0.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/home/bornevia/.npm/open-source-chat/1.0.0/package.tgz',
+11 verbose tar pack   '/home/bornevia/open-source-chat' ]
+12 verbose tarball /home/bornevia/.npm/open-source-chat/1.0.0/package.tgz
+13 verbose folder /home/bornevia/open-source-chat
+14 verbose addLocalTarball adding from inside cache /home/bornevia/.npm/open-source-chat/1.0.0/package.tgz
+15 silly cache afterAdd open-source-chat@1.0.0
+16 verbose afterAdd /home/bornevia/.npm/open-source-chat/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /home/bornevia/.npm/open-source-chat/1.0.0/package/package.json written
+18 silly publish { name: 'open-source-chat',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'Open Source Live Chat for CRM',
+18 silly publish   main: 'app.js',
+18 silly publish   directories: { test: 'test' },
+18 silly publish   dependencies:
+18 silly publish    { 'body-parser': '^1.17.1',
+18 silly publish      chai: '^3.5.0',
+18 silly publish      html: '^1.0.0',
+18 silly publish      'method-override': '^2.3.8',
+18 silly publish      mocha: '^3.2.0',
+18 silly publish      nodemon: '^1.11.0' },
+18 silly publish   devDependencies: {},
+18 silly publish   scripts: { test: 'mocha' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/jonathannatanaelsiahaan/Open-Source-Live-Chat-For-CRM.git' },
+18 silly publish   keywords: [ 'live', 'chat' ],
+18 silly publish   author:
+18 silly publish    { name: 'Jonathan Natanael Siahaan',
+18 silly publish      email: 'jonathannael12@gmail.com' },
+18 silly publish   license: 'ISC',
+18 silly publish   bugs: { url: 'https://github.com/jonathannatanaelsiahaan/Open-Source-Live-Chat-For-CRM/issues' },
+18 silly publish   homepage: 'https://github.com/jonathannatanaelsiahaan/Open-Source-Live-Chat-For-CRM#readme',
+18 silly publish   readme: '# Open Source Live Chat For CRM\n\nAn app with AngularJS on the fron, Socket.io + Express + Node on the back. \n\nContains angular libraries, test libraries and a bunch of scripts all preconfigured for\ninstant web development gratification. Just clone the repo (or download the zip/tarball) and\nyou\'re ready to develop your application.\n\nThis app shows how to wire together Angular client-side components with Socket.io and Express\non the server. \n\n## How to use it\n\nClone the Open-Source-Live-Chat-For-CRM repository and start hacking!\n\n### Running the app\n\nRuns like a typical express app:\n\n```shell\nnode app.js\n```\n\n### Running tests\n\nComing soon!\n\n### Receiving updates from upstream\n\nJust fetch the changes and merge them into your project with git.\n\n### Updating `angular.js`\n\nAlternatively, you can update AngularJS with [Bower](http://bower.io):\n\n```shell\nbower update angular\n```\n\n## Example Application\n\nComming soon\n\n## Directory Layout\n    \n    app.js                  --> app config\n    bower.json              --> for bower\n    package.json            --> for npm\n    public/                 --> all of the files to be used in on the client side\n      css/                  --> css files\n        app.css             --> default stylesheet\n      img/                  --> image files\n      js/                   --> javascript files\n        app.js              --> declare top-level app module\n        controllers.js      --> application controllers\n        directives.js       --> custom angular directives\n        filters.js          --> custom angular filters\n        services.js         --> custom angular services\n      index.html            --> main page for app\n      chat.html             --> template page for chat widget\n      chat-builder.js       --> javscript template for chat widget\n      partials/             --> angular view partials \n        partial1.html\n        partial2.html\n      bower_components/\n        angular/            --> angular.js\n        angular-socket-io/  --> socket.io adapter for angular\n    routes/\n      index.js              --> route for serving HTML pages and partials\n    \n\n\n\n## Contact\n\nFor more information on AngularJS please check out http://angularjs.org/\nFor more on Express, http://expressjs.com/.\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'f5f54c41b3dcce70c03bba95573a26f144a6421f',
+18 silly publish   _id: 'open-source-chat@1.0.0',
+18 silly publish   _shasum: '82231a7426a146b6b885a042efc4fdba79f6229a',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name open-source-chat
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/open-source-chat
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /home/bornevia/.npm/open-source-chat/1.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/open-source-chat
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 6:08:56 PM
+29 verbose request using bearer token for auth
+30 verbose request id 98dab117e6d3d376
+31 http request PUT https://registry.npmjs.org/open-source-chat
+32 http 403 https://registry.npmjs.org/open-source-chat
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '95',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Mon, 27 Mar 2017 18:08:59 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-sin18025-SIN',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1490638136.732329,VS0,VE2644',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 verbose request invalidating /home/bornevia/.npm/registry.npmjs.org/open-source-chat on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : open-source-chat
+36 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:88:13)
+36 verbose stack     at Request.emit (events.js:173:7)
+36 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at emitOne (events.js:83:20)
+36 verbose stack     at Request.emit (events.js:170:7)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+37 verbose statusCode 403
+38 verbose pkgid open-source-chat
+39 verbose cwd /home/bornevia/open-source-chat
+40 error Linux 3.13.0-62-generic
+41 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+42 error node v5.2.0
+43 error npm  v3.3.12
+44 error code E403
+45 error "You cannot publish over the previously published version 1.0.0." : open-source-chat
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
