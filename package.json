@@ -1,9 +1,35 @@
 {
-  "name": "Open Source Live Chat For CRM",
-  "version": "1.0.0",
-  "private": false,
+  "name": "live-chat-for-crm",
+  "version": "1.1.0",
+  "description": "Open Source Live Chat for CRM",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
-    "express": "^3.21.2",
-    "socket.io": "~0.9.16"
-  }
+    "body-parser": "^1.17.1",
+    "chai": "^3.5.0",
+    "html": "^1.0.0",
+    "method-override": "^2.3.8",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathannatanaelsiahaan/Open-Source-Live-Chat-For-CRM.git"
+  },
+  "keywords": [
+    "live",
+    "chat"
+  ],
+  "author": "Jonathan Natanael Siahaan <jonathannael12@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathannatanaelsiahaan/Open-Source-Live-Chat-For-CRM/issues"
+  },
+  "homepage": "https://github.com/jonathannatanaelsiahaan/Open-Source-Live-Chat-For-CRM#readme"
 }

@@ -3,7 +3,6 @@
  */
 
 exports.index = function(req, res){
-  //res.render('index.html');
   res.sendfile('public/index.html');
 };
 

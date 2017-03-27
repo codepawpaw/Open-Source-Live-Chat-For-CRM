@@ -3,12 +3,8 @@
  */
 
 module.exports = function (socket) {
-  socket.emit('send:name', {
-    name: 'Bob'
-  });
   socket.on('send:chat', function (data) {
-        console.log("Receive data");
-        console.log(data);
+        console.log("received");
         if(data.from == 'agent'){
           socket.broadcast.emit('send:toVisitor', {
             name: data.name, text: data.text

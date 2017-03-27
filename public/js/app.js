@@ -19,11 +19,11 @@ config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/view1', {
       templateUrl: 'partials/partial1.html',
-      controller: 'MyCtrl1'
+      controller: 'controller1'
     }).
     when('/view2', {
       templateUrl: 'partials/partial2.html',
-      controller: 'MyCtrl2'
+      controller: 'controller2'
     }).
     otherwise({
       redirectTo: '/view1'

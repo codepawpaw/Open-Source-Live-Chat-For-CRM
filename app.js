@@ -32,7 +32,7 @@ if (app.get('env') === 'production') {
 app.get('/', routes.index);
 
 app.get('/customer_chat_widget', function (req, res) {
-	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/customer_chat_widget');
+	  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000/customer_chat_widget');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -43,7 +43,7 @@ app.get('/customer_chat_widget', function (req, res) {
     // Set to true if you need the website to include cookies in the requests sent
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
-	res.sendfile('public/chat.html');
+	   res.sendfile('public/chat.html');
 });
 //app.get('/partials/:name', routes.partials);
 
@@ -58,4 +58,5 @@ server.listen(app.get('port'), function () {
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', require('./routes/socket'));
+module.exports.io = io;
 exports = module.exports = app;

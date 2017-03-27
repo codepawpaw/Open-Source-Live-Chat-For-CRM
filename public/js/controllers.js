@@ -13,10 +13,6 @@ angular.module('app.controllers', ['ngMaterial']).
         $scope.hide = true;
       };
 
-      socket.on('send:time', function (data) {
-        $scope.time = data.time;
-      });
-
       $scope.message = [];
 
 
@@ -39,24 +35,21 @@ angular.module('app.controllers', ['ngMaterial']).
       };
 
       var tabs = [
-            { title: 'Chat', content: "Tabs will become paginated if there isn't enough room for them."},
-            { title: 'Broadcast', content: "Tabs will become paginated if there isn't enough room for them."}
-          ],
-          selected = null,
-          previous = null;
+        { title: 'Chat'},
+        { title: 'Broadcast'}
+      ],
+      selected = null,
+      previous = null;
       $scope.tabs = tabs;
-      $scope.selectedIndex = 1;
+      $scope.selectedIndex = 0;
       $scope.$watch('selectedIndex', function(current, old){
         previous = selected;
-        selected = tabs[current];
-        
+        selected = tabs[current];        
       });
   }).
-  controller('MyCtrl1', function ($scope, socket) {
-    socket.on('send:time', function (data) {
-      $scope.time = data.time;
-    });
+  controller('controller1', function ($scope, socket) {
+
   }).
-  controller('MyCtrl2', function ($scope) {
+  controller('controller2', function ($scope) {
     // write Ctrl here
   });
