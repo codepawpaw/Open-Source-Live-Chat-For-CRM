@@ -1,18 +1,13 @@
 'use strict';
 
-// Declare app level module which depends on filters, and services
-
 angular.module('app', [
   'ngRoute',
-
   'app.controllers',
   'app.filters',
   'app.services',
   'app.directives',
   'ngMaterial',
   'ngMessages',
-
-  // 3rd party dependencies
   'btford.socket-io'
 ]).
 config(function ($routeProvider, $locationProvider) {

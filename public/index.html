@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="background-color:{{theme}}">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Open Source Live Chat For CRM</title>
@@ -15,57 +15,62 @@
   
 <style type="text/css">
   .carddemoBasicUsage .card-media {
-  background-color: #999999; }
+    background-color: #999999; 
+  }
 
   .tabsdemoDynamicTabs md-content {
-  background-color: transparent !important; }
+    background-color: transparent !important; 
+  }
   .tabsdemoDynamicTabs md-content md-tabs {
-    border: 1px solid #e1e1e1; }
-    .tabsdemoDynamicTabs md-content md-tabs md-tab-content {
-      background: #f6f6f6; }
-    .tabsdemoDynamicTabs md-content md-tabs md-tabs-wrapper {
-      background: white; }
+    border: 1px solid #e1e1e1; 
+  }
+  .tabsdemoDynamicTabs md-content md-tabs md-tab-content {
+    background: #f6f6f6; 
+  }
+  .tabsdemoDynamicTabs md-content md-tabs md-tabs-wrapper {
+    background: white; 
+  }
   .tabsdemoDynamicTabs md-content h1:first-child {
-    margin-top: 0; }
-
-.tabsdemoDynamicTabs md-input-container {
-  padding-bottom: 0; }
-
-.tabsdemoDynamicTabs .remove-tab {
-  margin-bottom: 40px; }
-
-.tabsdemoDynamicTabs .demo-tab > div > div {
-  padding: 25px;
-  box-sizing: border-box; }
-
-.tabsdemoDynamicTabs .edit-form input {
-  width: 100%; }
-
-.tabsdemoDynamicTabs md-tabs {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-
-.tabsdemoDynamicTabs md-tab[disabled] {
-  opacity: 0.5; }
-
-.tabsdemoDynamicTabs label {
-  text-align: left; }
-
-.tabsdemoDynamicTabs .long > input {
-  width: 264px; }
-
-.tabsdemoDynamicTabs .md-button.add-tab {
-  transform: translateY(5px); }
+    margin-top: 0; 
+  }
+  .tabsdemoDynamicTabs md-input-container {
+    padding-bottom: 0; 
+  }
+  .tabsdemoDynamicTabs .remove-tab {
+    margin-bottom: 40px; 
+  }
+  .tabsdemoDynamicTabs .demo-tab > div > div {
+    padding: 25px;
+    box-sizing: border-box; 
+  }
+  .tabsdemoDynamicTabs .edit-form input {
+    width: 100%; 
+  }
+  .tabsdemoDynamicTabs md-tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); 
+  }
+  .tabsdemoDynamicTabs md-tab[disabled] {
+    opacity: 0.5; 
+  }
+  .tabsdemoDynamicTabs label {
+    text-align: left; 
+  }
+  .tabsdemoDynamicTabs .long > input {
+    width: 264px; 
+  }
+  .tabsdemoDynamicTabs .md-button.add-tab {
+    transform: translateY(5px); 
+  }
 </style>
 
 </head>
-<body ng-app="app" ng-controller="AppCtrl" style="background-color:{{theme}}">
+<body ng-app="app" ng-controller="AppCtrl">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
   
   <script src="/socket.io/socket.io.js"></script>
-  <!--<script src="bower_components/angular/angular.js"></script>-->
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-socket-io/socket.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
@@ -76,146 +81,125 @@
   <script src="js/directives.js"></script>
   
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          </button>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          
-        </div>
-      </div>
-</nav>
-
-
-
-<div class="container" style="background-color:{{theme}}">
-           
-
-  <div class="row" style="background-color:{{theme}}">
-        <md-card>
-        
-          <nav class="navbar navbar-inverse" ng-hide="isMobileDevice">
-            <ul class="nav navbar-nav">
-            </ul>
-
-          </nav>
-          <md-card-title>
-            <md-card-title-text>
-              <span class="md-headline">Open source live chat for CRM</span>
-              <span class="md-subhead">
-                
-              </span>
-
-
-            </md-card-title-text>
-          </md-card-title>
-          <CENTER><md-button class="md-primary md-raised" ng-if="hide == false" style="width:100px;" ng-click="loadMore()">Load More</md-button></CENTER>
-          <div ng-repeat="mes in message | limitTo:limit track by $index">
-            <TABLE>
-                <TR ng-if="mes.owner == 'visitor'"> 
-                  <TD>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                  </TD>
-                  <TD>
-                    <img class="img-responsive img-circle media-object img-medium ng-isolate-scope profile" initial-avatar="Visitor-WUXdQ5Zh" alt="..." data-name="Visitor-WUXdQ5Zh" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDQxLCAxMjgsIDE4NSk7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtd2VpZ2h0OiA0MDA7IGZvbnQtc2l6ZTogNjBweDsiPlY8L3RleHQ+PC9zdmc+" width="40" height="40">
-                  </TD>
-                  <TD>
-                    <div ng-cloak>
-                        <div flex-xs flex-gt-xs="20" layout="column">
-                          <md-card style="width:180px;height:90px;">
-                            <md-card-title>
-                              <md-card-title-text>
-                                  <b>Visitor-WUXdQ5Zh</b>
-                                  <p>{{mes.message}}</p>
-                              </md-card-title-text>
-                            </md-card-title>
-                          </md-card>
-                        </div>        
-                    </div>
-                  </TD>
-
-                </TR>
-                <TR ng-if="mes.owner == 'agent'">
-                  <TD>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  </TD>
-                  <TD>
-                    <div ng-cloak>
-                        <div flex-xs flex-gt-xs="20" layout="column">
-                          <md-card style="width:180px;height:90px;">
-                            <md-card-title>
-                              <md-card-title-text>
-                                  <b>Agent</b>
-                                  <p>{{mes.message}}</p>
-                              </md-card-title-text>
-                            </md-card-title>
-                          </md-card>
-                        </div>        
-                    </div>
-                  </TD>
-                  <TD>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                  </TD>
-                  <TD>
-                    <img ng-if="conv_item.user.avatar_image == null || conv_item.user.avatar_image == ''" class="img-responsive img-circle media-object img-medium ng-scope ng-isolate-scope profile" initial-avatar="asd" alt="..." data-name="asd" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUyLCAxNTIsIDIxOSk7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtd2VpZ2h0OiA0MDA7IGZvbnQtc2l6ZTogNjBweDsiPkE8L3RleHQ+PC9zdmc+" width="40" height="40">
-                  </TD>
-                </TR>
-            </TABLE>
-
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            </button>
           </div>
-          
-        </md-card>
-
-
-        <div class="sample" layout="column" ng-cloak>
-          <md-content class="md-padding">
-            <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
-              <md-tab ng-repeat="tab in tabs"
-                      ng-disabled="tab.disabled"
-                      label="{{tab.title}}">
-                <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
-                  
-                      <div layout="column" ng-cloak class="md-inline-form">
-
-
-                        <md-content layout-padding>
-                          <div>
-                            <form name="userForm">
-                              <md-input-container class="md-block">
-                                <textarea ng-model="text" md-maxlength="50" rows="2" md-select-on-focus></textarea>
-                              </md-input-container>
-                              <md-button class="md-primary md-raised" ng-click="chat('', text)">Chat</md-button>
-                            </form>
-                          </div>
-                        </md-content>
-
-                      </div>
-                  
-                  <br/>
-                  
-                </div>
-              </md-tab>
-            </md-tabs>
-          </md-content>
-
-
+          <div id="navbar" class="navbar-collapse collapse">
+            
+          </div>
         </div>
+  </nav>
 
 
-        <script type="text/javascript">var s=document.createElement("script");s.id="chat";s.type="text/javascript";s.src="chat-builder.js";document.head.appendChild(s);</script>
-        <div ng-view></div>
+
+  <div class="container">
+    <div class="row">
+          <md-card>
+            <nav class="navbar navbar-inverse" ng-hide="isMobileDevice">
+              <ul class="nav navbar-nav">
+              </ul>
+            </nav>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">Open source live chat for CRM</span>
+              </md-card-title-text>
+            </md-card-title>
+            <CENTER>
+              <md-button class="md-primary md-raised" ng-if="hide == false" style="width:100px;" ng-click="loadMore()">Load More</md-button>
+            </CENTER>
+            <div ng-repeat="mes in message | limitTo:limit track by $index">
+              <TABLE>
+                  <TR ng-if="mes.owner == 'visitor'"> 
+                    <TD>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                    </TD>
+                    <TD>
+                      <img class="img-responsive img-circle media-object img-medium ng-isolate-scope profile" initial-avatar="Visitor-WUXdQ5Zh" alt="..." data-name="Visitor-WUXdQ5Zh" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDQxLCAxMjgsIDE4NSk7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtd2VpZ2h0OiA0MDA7IGZvbnQtc2l6ZTogNjBweDsiPlY8L3RleHQ+PC9zdmc+" width="40" height="40">
+                    </TD>
+                    <TD>
+                      <div ng-cloak>
+                          <div flex-xs flex-gt-xs="20" layout="column">
+                            <md-card style="width:180px;height:90px;">
+                              <md-card-title>
+                                <md-card-title-text>
+                                    <b>Visitor-WUXdQ5Zh</b>
+                                    <p>{{mes.message}}</p>
+                                </md-card-title-text>
+                              </md-card-title>
+                            </md-card>
+                          </div>        
+                      </div>
+                    </TD>
+
+                  </TR>
+                  <TR ng-if="mes.owner == 'agent'">
+                    <TD>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </TD>
+                    <TD>
+                      <div ng-cloak>
+                          <div flex-xs flex-gt-xs="20" layout="column">
+                            <md-card style="width:180px;height:90px;">
+                              <md-card-title>
+                                <md-card-title-text>
+                                    <b>Agent</b>
+                                    <p>{{mes.message}}</p>
+                                </md-card-title-text>
+                              </md-card-title>
+                            </md-card>
+                          </div>        
+                      </div>
+                    </TD>
+                    <TD>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                    </TD>
+                    <TD>
+                      <img ng-if="conv_item.user.avatar_image == null || conv_item.user.avatar_image == ''" class="img-responsive img-circle media-object img-medium ng-scope ng-isolate-scope profile" initial-avatar="asd" alt="..." data-name="asd" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgc3R5bGU9IndpZHRoOiAxMDBweDsgaGVpZ2h0OiAxMDBweDsgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUyLCAxNTIsIDIxOSk7Ij48dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB5PSI1MCUiIHg9IjUwJSIgZHk9IjAuMzVlbSIgcG9pbnRlci1ldmVudHM9ImF1dG8iIGZpbGw9IiNmZmZmZmYiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2FOZXVlLUxpZ2h0LEhlbHZldGljYSBOZXVlIExpZ2h0LEhlbHZldGljYSBOZXVlLEhlbHZldGljYSwgQXJpYWwsTHVjaWRhIEdyYW5kZSwgc2Fucy1zZXJpZiIgc3R5bGU9ImZvbnQtd2VpZ2h0OiA0MDA7IGZvbnQtc2l6ZTogNjBweDsiPkE8L3RleHQ+PC9zdmc+" width="40" height="40">
+                    </TD>
+                  </TR>
+              </TABLE>
+            </div>
+          </md-card>
 
 
+          <div class="sample" layout="column" ng-cloak>
+            <md-content class="md-padding">
+              <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
+                <md-tab ng-repeat="tab in tabs"
+                        ng-disabled="tab.disabled"
+                        label="{{tab.title}}">
+                  <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;"> 
+                        <div layout="column" ng-cloak class="md-inline-form">
+                          <md-content layout-padding>
+                            <div>
+                              <form name="userForm">
+                                <md-input-container class="md-block">
+                                  <textarea ng-model="text" md-maxlength="50" rows="2" md-select-on-focus></textarea>
+                                </md-input-container>
+                                <md-button class="md-primary md-raised" ng-click="chat('', text)">Chat</md-button>
+                              </form>
+                            </div>
+                          </md-content>
+                        </div>
+                        <br/>
+                  </div>
+                </md-tab>
+              </md-tabs>
+            </md-content>
+          </div>
+
+          <script type="text/javascript">var s=document.createElement("script");s.id="chat";s.type="text/javascript";s.src="chat-builder.js";document.head.appendChild(s);</script>
+          <div ng-view></div>
+    </div>
   </div>
-
- 
 
 </body>
  
 
-</div>
+
 
 </html>
