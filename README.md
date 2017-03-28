@@ -1,13 +1,13 @@
 # Open Source Live Chat For CRM
 
-An app with AngularJS on the fron, Socket.io + Express + Node on the back. 
+An app with AngularJS + Material Design on the fron, Socket.io + Express + Node on the back. 
 
-Contains angular libraries, test libraries and a bunch of scripts all preconfigured for
+Contains angular libraries, material design, test libraries and a bunch of scripts all preconfigured for
 instant web development gratification. Just clone the repo (or download the zip/tarball) and
 you're ready to develop your application.
 
 This app shows how to wire together Angular client-side components with Socket.io and Express
-on the server. 
+on the server to create an chat application. 
 
 ## How to use it
 
