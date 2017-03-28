@@ -1,6 +1,6 @@
 {
   "name": "live-chat-for-crm",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Open Source Live Chat for CRM",
   "main": "app.js",
   "directories": {
